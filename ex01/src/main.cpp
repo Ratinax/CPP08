@@ -32,7 +32,7 @@ int main()
 	{
 		sp2.addNumber(55);
 		sp2.addNumber(66);
-		sp2.addRangeNumber(v);
+		sp2.addRangeNumbers(v.begin(), v.end());
 		sp2.addNumber(77);
 		sp2.addNumber(88);
 	}

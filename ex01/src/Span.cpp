@@ -79,14 +79,6 @@ int	Span::longestSpan()
 	return (max - min);
 }
 
-void	Span::addRangeNumber(std::vector<int> range)
-{
-	if (_amountElem + range.size() > _size)
-		throw (SpanFullException());
-	_array.insert(_array.begin() + _amountElem, range.begin(), range.end());
-	_amountElem+=range.size();
-}
-
 void	Span::put()
 {
 	for (unsigned int i = 0; i < _amountElem; i++)

@@ -39,10 +39,18 @@ class	Span {
 		Span &operator=(const Span &s);
 		~Span(void);
 		void	addNumber(int nb);
-		void	addRangeNumber(std::vector<int> range);
 		int		shortestSpan();
 		int		longestSpan();
 		void	put();
+		template<typename iter>
+		void	addRangeNumbers(iter start, iter end)
+		{
+			while (start != end)
+			{
+				addNumber(*start);
+				start++;
+			}
+		}
 
 	class SpanFullException : public std::exception
 	{
